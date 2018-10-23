@@ -15,7 +15,7 @@ class latestList:
         
         num=0
         for line in a:
-            #高端判断
+            #判断是否为听力
             if(line.text.find("VOA常速英语：")!=-1):
                 num=num+1
                 tempitem={}
@@ -37,7 +37,6 @@ class latestList:
 
 if __name__ == "__main__":
     print("欢迎使用VOA最新常速听力链接获取器。")
-    #userURL=input("请输入所需下载的文档的网址（直接复制浏览器中的网址即可）：")
 
     myList=latestList()
     
@@ -49,16 +48,3 @@ if __name__ == "__main__":
     myList.showList()
     #myList.getContent(html)
 
-    #开始解析
-    #soup = BeautifulSoup(html, "html.parser")
-    
-    #对URL进行处理
-    #targetURL = userURL[userURL.rindex('/')+1:userURL.rindex('-')]
-
-'''
-    targetURL=userURL
-    response = request.urlopen(targetURL)
-    html = response.read()
-    html = html.decode("utf-8")
-    #print(html)
-'''
